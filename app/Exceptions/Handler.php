@@ -84,12 +84,12 @@ class Handler extends ExceptionHandler
             case 'App\Exceptions\JWTExpiredException';
                 $code = 'TokenExpired';
                 $msg = 'The token has expired.';
-                $statusCode = 400;
+                $statusCode = 401;
                 break;
             case 'App\Exceptions\JWTInvalidException';
                 $code = 'InvalidToken';
                 $msg = 'The token is invalid.';
-                $statusCode = 400;
+                $statusCode = 401;
                 break;
             case 'App\Exceptions\JWTUserNotFoundException';
                 $code = 'UserNotFound';
