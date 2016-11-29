@@ -58,9 +58,9 @@ class AuthController extends Controller
         }
 
         return response([
-            'status' => 'success',
-            'token' => $token
-        ]);
+            'status' => 'success'
+        ])
+        ->header('Authorization', $token);
     }
 
     public function user(Request $request)
