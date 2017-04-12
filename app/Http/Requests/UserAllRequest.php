@@ -8,7 +8,9 @@ class UserAllRequest extends Request
 {
     public function rules()
     {
-        return [];
+        return [
+            'status' => 'in:active,pending,inactive,deleted'
+        ];
     }
 
     public function authorize()
