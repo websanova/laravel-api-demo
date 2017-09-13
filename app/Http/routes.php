@@ -28,7 +28,7 @@ Route::group([
     'middleware' => ['jwt.auth', 'cors']
 ], function ($app) {
     $app->post('/auth/logout', 'AuthController@logout');
-    $app->post('/auth/login-other', 'AuthController@loginOther');
+    $app->post('/auth/impersonate', 'AuthController@impersonate');
     $app->get('/auth/user', 'AuthController@user');
     
 

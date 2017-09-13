@@ -45,7 +45,7 @@ class AuthController extends Controller
         ->header('Authorization', $token);
     }
 
-    public function loginOther(Request $request)
+    public function impersonate(Request $request)
     {
         $user = User::find($request->get('id'));
 
